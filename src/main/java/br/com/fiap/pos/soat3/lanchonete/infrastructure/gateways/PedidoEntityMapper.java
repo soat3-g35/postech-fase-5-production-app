@@ -1,8 +1,6 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways.pedido;
+package br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways;
 
 import br.com.fiap.pos.soat3.lanchonete.domain.entity.*;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways.produto.ProdutoEntityMapper;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.categoria.CategoriaEntity;
 import br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.cliente.ClienteEntity;
 import br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.itempedido.ItemPedidoEntity;
 import br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.pedido.PedidoEntity;

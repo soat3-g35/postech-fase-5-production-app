@@ -2,7 +2,6 @@ package br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.pedido;
 
 import br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.cliente.ClienteEntity;
 import br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.itempedido.ItemPedidoEntity;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

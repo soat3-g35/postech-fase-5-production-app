@@ -1,4 +1,4 @@
-package br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido;
+package br.com.fiap.pos.soat3.lanchonete.application.usecases;
 
 import br.com.fiap.pos.soat3.lanchonete.application.gateways.PedidoGateway;
 import br.com.fiap.pos.soat3.lanchonete.domain.entity.Pedido;

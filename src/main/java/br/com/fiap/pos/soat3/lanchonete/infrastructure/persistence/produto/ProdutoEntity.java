@@ -1,6 +1,5 @@
 package br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.produto;
 
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.categoria.CategoriaEntity;
 import br.com.fiap.pos.soat3.lanchonete.infrastructure.persistence.itempedido.ItemPedidoEntity;
 import jakarta.persistence.*;
 
@@ -27,25 +26,16 @@ public class ProdutoEntity {
     private String imagem;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "categoria_id", nullable = false)
-    private CategoriaEntity categoria;
 
     @OneToMany(mappedBy = "produto")
     private Collection<ItemPedidoEntity> items;
-
-    public ProdutoEntity(String nome, String valor, String descricao, String imagem, CategoriaEntity categoriaEntity) {
-        this.nome = nome;
-        this.valor = valor;
-        this.descricao = descricao;
-        this.imagem = imagem;
-        this.categoria = categoriaEntity;
-    }
 
     public ProdutoEntity() {
 
     }
 
     public ProdutoEntity(Long id) {
-       this.id = id;
+        this.id = id;
     }
 
     public Long getId() {
@@ -86,14 +76,6 @@ public class ProdutoEntity {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
-    }
-
-    public CategoriaEntity getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(CategoriaEntity categoria) {
-        this.categoria = categoria;
     }
 
     public Collection<ItemPedidoEntity> getItems() {

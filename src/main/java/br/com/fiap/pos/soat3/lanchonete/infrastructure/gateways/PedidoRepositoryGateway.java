@@ -1,4 +1,4 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways.pedido;
+package br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways;
 
 import br.com.fiap.pos.soat3.lanchonete.application.gateways.PedidoGateway;
 import br.com.fiap.pos.soat3.lanchonete.infrastructure.config.exception.EntityNotFoundException;
@@ -25,14 +25,6 @@ public class PedidoRepositoryGateway implements PedidoGateway {
         this.pedidoRepository = pedidoRepository;
         this.itemPedidoRepository = itemPedidoRepository;
         this.pedidoEntityMapper = pedidoEntityMapper;
-    }
-
-    @Override
-    public Pedido cadastraPedido(Pedido pedido) {
-        PedidoEntity pedidoEntity = pedidoEntityMapper.toEntity(pedido);
-        pedido.setId(pedidoRepository.save(pedidoEntity).getId());
-        salvaItemPedido(pedidoEntity);
-        return pedido;
     }
 
     private void salvaItemPedido(PedidoEntity pedidoEntity) {
