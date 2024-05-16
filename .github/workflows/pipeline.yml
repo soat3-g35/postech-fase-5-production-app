@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
+        pedido-service-url: ${{ secrets.PEDIDO_SERVICE_URL }}
 
     - name: Analyze with SonarCloud
       run: mvn -B verify sonar:sonar -Dsonar.projectKey=soat3-g35_postech-fase-4-production-app -Dsonar.organization=soat3-g35 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN

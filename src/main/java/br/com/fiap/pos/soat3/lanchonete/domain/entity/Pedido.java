@@ -25,6 +25,15 @@ public class Pedido {
         this.itensPedido = itensPedido;
     }
 
+    public Pedido(Long id, Long clienteId, List<ItemPedido> itensPedido, String totalPedido,
+                  StatusPedido status) {
+        this.id = id;
+        this.clienteId = clienteId;
+        this.itensPedido = itensPedido;
+        this.totalPedido = totalPedido;
+        this.status = status;
+    }
+
     public Pedido(Long id, Long clienteId, List<ItemPedido> itensPedido, LocalDateTime dataDeCriacao, String totalPedido,
                   StatusPedido status) {
         this.id = id;

@@ -1,6 +1,5 @@
 package br.com.fiap.pos.soat3.lanchonete.domain.entity;
 
-
 import java.math.BigDecimal;
 
 public class Produto {

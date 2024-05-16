@@ -89,7 +89,7 @@
 				<executions>
 					<execution>
 						<configuration>
-							<mainClass>br.com.fiap.pos.soat3.lanchonete.LanchoneteApplication</mainClass>
+							<mainClass>br.com.fiap.pos.soat3.lanchonete.ProducaoApplication</mainClass>
 						</configuration>
 					</execution>
 				</executions>
