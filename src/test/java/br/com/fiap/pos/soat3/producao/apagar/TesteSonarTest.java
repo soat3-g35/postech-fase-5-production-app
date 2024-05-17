@@ -19,3 +19,4 @@ public class TesteSonarTest {
         Assertions.assertEquals(inteiro2,2);
     }
 }
+
