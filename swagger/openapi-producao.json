@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "pos-tech-producao v4",
+    "version": "1.0.0",
+    "contact": {}
+  },
+  "servers": [
+    {
+      "url": "{{url_gateway}}"
+    }
+  ],
+  "paths": {
+    "/producao/pedidos/lista": {
+      "get": {
+        "tags": [
+          "api-gateway",
+          "producao-service"
+        ],
+        "summary": "Recupera Pedidos Producao",
+        "description": "Recupera Pedidos Producao",
+        "operationId": "recuperaPedidosProducao",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/pedido/pedidos/3/status/PRONTO": {
+      "put": {
+        "tags": [
+          "api-gateway",
+          "producao-service"
+        ],
+        "summary": "Altera Status do Pedido - Inicia PREPARACAO",
+        "description": "Altera Status do Pedido - Inicia PREPARACAO",
+        "operationId": "alteraStatusDoPedidoIniciaPreparacao",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/pedido/pedidos/3/status/PREPARACAO": {
+      "put": {
+        "tags": [
+          "api-gateway",
+          "producao-service"
+        ],
+        "summary": "Altera Status do Pedido - Finaliza Pedido - PRONTO",
+        "description": "Altera Status do Pedido - Finaliza Pedido - PRONTO",
+        "operationId": "alteraStatusDoPedidoFinalizaPedidoPronto",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/pedido/pedidos/3/status": {
+      "get": {
+        "tags": [
+          "api-gateway",
+          "producao-service"
+        ],
+        "summary": "Recupera Status do Pedido",
+        "description": "Recupera Status do Pedido",
+        "operationId": "recuperaStatusDoPedido",
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "api-gateway"
+    },
+    {
+      "name": "producao-service"
+    }
+  ]
+}

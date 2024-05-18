@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "75bb2e51-7559-42ae-aa3b-88614c191e46",
+		"name": "pos-tech-producao v4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api-gateway",
+			"item": [
+				{
+					"name": "producao-service",
+					"item": [
+						{
+							"name": "Recupera Pedidos Producao",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJraWQiOiJBaEI0MUw2Q3pYNVd1RHJ2OVZaT1JqdDdobU5ncmNUZHdoOE5hdlQyWElrPSIsImFsZyI6IlJTMjU2In0.eyJvcmlnaW5fanRpIjoiZjNlMjA3ZWYtNjE4Yy00NjBmLWIzOTQtODMwMjI4NzM0N2Q0Iiwic3ViIjoiOTQ2ODY0YTgtNTAzMS03MGM1LTk1ZmUtZmI2YThlZDdjNGM3IiwiYXVkIjoiM2UyaDhlbDZ1NG9pcXRycjVnMWtuM3I1YWYiLCJldmVudF9pZCI6ImY2OTkwOTBhLTdjM2EtNGQ5MS04N2ZlLTU2Nzk5ZWY1ZDZhMyIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNzE2MDQ5NzE0LCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9HWlNyV0ZURDIiLCJjb2duaXRvOnVzZXJuYW1lIjoibmV3X3Rlc3QiLCJleHAiOjE3MTYwNTMzMTQsImlhdCI6MTcxNjA0OTcxNCwianRpIjoiMjZiMmYxMmYtYWNkOS00MmMzLThiMjEtOGFjOWU0Y2RiM2E2In0.g5EA01oxMifrU7sy_tHORg1CesxtQHZv9BxIxvuAN0-AaUFyc6EsK-FPNTFxetyk9O0HxmW2eck2zn6RGtXwQwwgswSaZbw5gdfAec10iQ6SnrJRpqrs4ynadDTsfZ9GvRPGKNiI-nfkR6enjIdqDL6JXNf05oY4Go978Pxz9sVSQI7ruk3-jBOAK2rkg9tsd65Dqx5dwAorkDxpay2ls-xo9y3Z3evSwzYXnL8_eKRnB4bCVoCGtYQDG7n3tDhVrENeaw2Gv3V9d5Gg-ElH5mY6n5kY21lEzRdeDx3W20NVhWhSYOiX3PJmmeV6b7x7WQ9ZDVPhv6yBIdlWAXy2rw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_gateway}}/producao/pedidos/lista",
+									"host": [
+										"{{url_gateway}}"
+									],
+									"path": [
+										"producao",
+										"pedidos",
+										"lista"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Altera Status do Pedido - Inicia PREPARACAO",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJraWQiOiJBaEI0MUw2Q3pYNVd1RHJ2OVZaT1JqdDdobU5ncmNUZHdoOE5hdlQyWElrPSIsImFsZyI6IlJTMjU2In0.eyJvcmlnaW5fanRpIjoiN2RiN2RjMmQtM2U5Yi00MjM1LWJlMTQtY2FhNTkxMjMyYWI5Iiwic3ViIjoiOTQ2ODY0YTgtNTAzMS03MGM1LTk1ZmUtZmI2YThlZDdjNGM3IiwiYXVkIjoiM2UyaDhlbDZ1NG9pcXRycjVnMWtuM3I1YWYiLCJldmVudF9pZCI6ImMxNTMzMGQ1LTViM2UtNDk4NC05ZDFkLTM0YmI1MjllNTMwZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNzE2MDQ1NTAxLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9HWlNyV0ZURDIiLCJjb2duaXRvOnVzZXJuYW1lIjoibmV3X3Rlc3QiLCJleHAiOjE3MTYwNDkxMDEsImlhdCI6MTcxNjA0NTUwMSwianRpIjoiMjY4Yzg3ZjUtOTcxMy00NjM1LTk0OGEtYjNjYjg0YTlhNTM4In0.qy3XXTNpuOPZQHkAKSEM_OWbl3R1zOigv0xFwZ1uBnZVGmfbJvKOiLQtwZXf3aPr3O0y_DFai-xGGdtNrEHMaVpgWsCG3BdYFpYxz4PVV-MLMD5A-Qe-GCYsnF_uRI9YhwtWu5WJJpgIVElhMToGIQPwraHKccsTzDKL6C0lhH0CfoHxBn00wv_NkpX8b1u6ZlB76VMtoUPWpXWmOxf2mgeCllwmXoar9u0nlCHB9yQVgqUCiFq7Swy1lJe5X2uOZJhsaAqWQpgkHPNRwPs79ylXqzsCG8Vx_MGpTkjijbiKOBJBBmOyXSpAOIRbVRUGd83n5gTCZrSvHAWfhour5g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url_gateway}}/pedido/pedidos/3/status/PRONTO",
+									"host": [
+										"{{url_gateway}}"
+									],
+									"path": [
+										"pedido",
+										"pedidos",
+										"3",
+										"status",
+										"PRONTO"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Altera Status do Pedido - Finaliza Pedido - PRONTO",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJraWQiOiJBaEI0MUw2Q3pYNVd1RHJ2OVZaT1JqdDdobU5ncmNUZHdoOE5hdlQyWElrPSIsImFsZyI6IlJTMjU2In0.eyJvcmlnaW5fanRpIjoiN2RiN2RjMmQtM2U5Yi00MjM1LWJlMTQtY2FhNTkxMjMyYWI5Iiwic3ViIjoiOTQ2ODY0YTgtNTAzMS03MGM1LTk1ZmUtZmI2YThlZDdjNGM3IiwiYXVkIjoiM2UyaDhlbDZ1NG9pcXRycjVnMWtuM3I1YWYiLCJldmVudF9pZCI6ImMxNTMzMGQ1LTViM2UtNDk4NC05ZDFkLTM0YmI1MjllNTMwZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNzE2MDQ1NTAxLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9HWlNyV0ZURDIiLCJjb2duaXRvOnVzZXJuYW1lIjoibmV3X3Rlc3QiLCJleHAiOjE3MTYwNDkxMDEsImlhdCI6MTcxNjA0NTUwMSwianRpIjoiMjY4Yzg3ZjUtOTcxMy00NjM1LTk0OGEtYjNjYjg0YTlhNTM4In0.qy3XXTNpuOPZQHkAKSEM_OWbl3R1zOigv0xFwZ1uBnZVGmfbJvKOiLQtwZXf3aPr3O0y_DFai-xGGdtNrEHMaVpgWsCG3BdYFpYxz4PVV-MLMD5A-Qe-GCYsnF_uRI9YhwtWu5WJJpgIVElhMToGIQPwraHKccsTzDKL6C0lhH0CfoHxBn00wv_NkpX8b1u6ZlB76VMtoUPWpXWmOxf2mgeCllwmXoar9u0nlCHB9yQVgqUCiFq7Swy1lJe5X2uOZJhsaAqWQpgkHPNRwPs79ylXqzsCG8Vx_MGpTkjijbiKOBJBBmOyXSpAOIRbVRUGd83n5gTCZrSvHAWfhour5g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{url_gateway}}/pedido/pedidos/3/status/PREPARACAO",
+									"host": [
+										"{{url_gateway}}"
+									],
+									"path": [
+										"pedido",
+										"pedidos",
+										"3",
+										"status",
+										"PREPARACAO"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Recupera Status do Pedido",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJraWQiOiJBaEI0MUw2Q3pYNVd1RHJ2OVZaT1JqdDdobU5ncmNUZHdoOE5hdlQyWElrPSIsImFsZyI6IlJTMjU2In0.eyJvcmlnaW5fanRpIjoiN2RiN2RjMmQtM2U5Yi00MjM1LWJlMTQtY2FhNTkxMjMyYWI5Iiwic3ViIjoiOTQ2ODY0YTgtNTAzMS03MGM1LTk1ZmUtZmI2YThlZDdjNGM3IiwiYXVkIjoiM2UyaDhlbDZ1NG9pcXRycjVnMWtuM3I1YWYiLCJldmVudF9pZCI6ImMxNTMzMGQ1LTViM2UtNDk4NC05ZDFkLTM0YmI1MjllNTMwZiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNzE2MDQ1NTAxLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0xLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMV9HWlNyV0ZURDIiLCJjb2duaXRvOnVzZXJuYW1lIjoibmV3X3Rlc3QiLCJleHAiOjE3MTYwNDkxMDEsImlhdCI6MTcxNjA0NTUwMSwianRpIjoiMjY4Yzg3ZjUtOTcxMy00NjM1LTk0OGEtYjNjYjg0YTlhNTM4In0.qy3XXTNpuOPZQHkAKSEM_OWbl3R1zOigv0xFwZ1uBnZVGmfbJvKOiLQtwZXf3aPr3O0y_DFai-xGGdtNrEHMaVpgWsCG3BdYFpYxz4PVV-MLMD5A-Qe-GCYsnF_uRI9YhwtWu5WJJpgIVElhMToGIQPwraHKccsTzDKL6C0lhH0CfoHxBn00wv_NkpX8b1u6ZlB76VMtoUPWpXWmOxf2mgeCllwmXoar9u0nlCHB9yQVgqUCiFq7Swy1lJe5X2uOZJhsaAqWQpgkHPNRwPs79ylXqzsCG8Vx_MGpTkjijbiKOBJBBmOyXSpAOIRbVRUGd83n5gTCZrSvHAWfhour5g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url_gateway}}/pedido/pedidos/3/status",
+									"host": [
+										"{{url_gateway}}"
+									],
+									"path": [
+										"pedido",
+										"pedidos",
+										"3",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
