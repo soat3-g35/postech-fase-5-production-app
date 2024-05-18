@@ -1,18 +1,13 @@
 package br.com.fiap.pos.soat3.producao.infrastructure.config;
 
-import br.com.fiap.pos.soat3.producao.application.gateways.EnviaConfirmacaoGateway;
-import br.com.fiap.pos.soat3.producao.application.gateways.PedidoGateway;
-import br.com.fiap.pos.soat3.producao.application.usecases.pagamento.EnviaConfirmacaoInteractor;
+import br.com.fiap.pos.soat3.producao.application.gateways.AtualizaStatusPedidoGateway;
+import br.com.fiap.pos.soat3.producao.application.gateways.ConsultaStatusPedidoGateway;
+import br.com.fiap.pos.soat3.producao.application.gateways.ListaPedidoGateway;
 import br.com.fiap.pos.soat3.producao.application.usecases.pedido.AtualizaStatusPedidoInteractor;
 import br.com.fiap.pos.soat3.producao.application.usecases.pedido.ConsultaStatusPedidoInteractor;
 import br.com.fiap.pos.soat3.producao.application.usecases.pedido.ListaPedidosInteractor;
 import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoDTOMapper;
-import br.com.fiap.pos.soat3.producao.infrastructure.gateways.pedido.PedidoEntityMapper;
-import br.com.fiap.pos.soat3.producao.infrastructure.gateways.pedido.PedidoRepositoryGateway;
-import br.com.fiap.pos.soat3.producao.infrastructure.integration.EnviaConfirmacaoMock;
-import br.com.fiap.pos.soat3.producao.infrastructure.integration.MVPCliente;
-import br.com.fiap.pos.soat3.producao.infrastructure.persistence.itempedido.ItemPedidoRepository;
-import br.com.fiap.pos.soat3.producao.infrastructure.persistence.pedido.PedidoRepository;
+import br.com.fiap.pos.soat3.producao.infrastructure.gateways.pedido.PedidoMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,8 +15,8 @@ import org.springframework.context.annotation.Configuration;
 public class PedidoBeanConfig {
 
     @Bean
-    AtualizaStatusPedidoInteractor atualizaStatusPedidoUseCase(PedidoGateway pedidoGateway) {
-        return new AtualizaStatusPedidoInteractor(pedidoGateway);
+    AtualizaStatusPedidoInteractor atualizaStatusPedidoUseCase(AtualizaStatusPedidoGateway atualizaStatusPedidoGateway, PedidoMapper pedidoMapper) {
+        return new AtualizaStatusPedidoInteractor(atualizaStatusPedidoGateway, pedidoMapper);
     }
 
     @Bean
@@ -30,34 +25,23 @@ public class PedidoBeanConfig {
     }
 
     @Bean
-    ConsultaStatusPedidoInteractor consultaStatusPedidoUseCase(PedidoGateway pedidoGateway) {
-        return new ConsultaStatusPedidoInteractor(pedidoGateway);
+    AtualizaStatusPedidoInteractor atualizaStatusPedidoGateway(AtualizaStatusPedidoGateway atualizaStatusPedidoGateway, PedidoMapper pedidoMapper) {
+        return new AtualizaStatusPedidoInteractor(atualizaStatusPedidoGateway, pedidoMapper);
     }
 
     @Bean
-    ListaPedidosInteractor listaPedidosUseCase(PedidoGateway pedidoGateway) {
-        return new ListaPedidosInteractor(pedidoGateway);
+    ConsultaStatusPedidoInteractor consultaStatusPedidoUseCase(ConsultaStatusPedidoGateway consultaStatusPedidoGateway) {
+        return new ConsultaStatusPedidoInteractor(consultaStatusPedidoGateway);
     }
 
     @Bean
-    EnviaConfirmacaoInteractor enviaConfirmacaoUseCase(EnviaConfirmacaoGateway enviaConfirmacaoGateway, PedidoGateway pedidoGateway) {
-        return new EnviaConfirmacaoInteractor(enviaConfirmacaoGateway, pedidoGateway);
+    ListaPedidosInteractor listaPedidosUseCase(ListaPedidoGateway listaPedidoGateway, PedidoMapper pedidoMapper) {
+        return new ListaPedidosInteractor(listaPedidoGateway, pedidoMapper);
     }
 
     @Bean
-    EnviaConfirmacaoMock enviaConfirmacaoMock(MVPCliente mvpCliente) {
-        return new EnviaConfirmacaoMock(mvpCliente);
+    PedidoMapper pedidoEntityMapper() {
+        return new PedidoMapper();
     }
-
-    @Bean
-    PedidoEntityMapper pedidoEntityMapper() {
-        return new PedidoEntityMapper();
-    }
-
-    @Bean
-    PedidoRepositoryGateway pedidoRepositoryGateway(PedidoRepository pedidoRepository,
-                                                    ItemPedidoRepository itemPedidoRepository,
-                                                    PedidoEntityMapper pedidoEntityMapper) {
-        return new PedidoRepositoryGateway(pedidoRepository, itemPedidoRepository, pedidoEntityMapper);
-    }
+    
 }

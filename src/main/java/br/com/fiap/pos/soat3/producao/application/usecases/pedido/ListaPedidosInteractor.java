@@ -1,33 +1,27 @@
 package br.com.fiap.pos.soat3.producao.application.usecases.pedido;
 
-import br.com.fiap.pos.soat3.producao.application.gateways.PedidoGateway;
+import br.com.fiap.pos.soat3.producao.application.gateways.ListaPedidoGateway;
 import br.com.fiap.pos.soat3.producao.domain.entity.Pedido;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoResponse;
+import br.com.fiap.pos.soat3.producao.infrastructure.gateways.pedido.PedidoMapper;
 
-import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListaPedidosInteractor {
-    private final PedidoGateway pedidoGateway;
+    
+    private final ListaPedidoGateway listaPedidoGateway;
+    private final PedidoMapper pedidoMapper;
 
-    public ListaPedidosInteractor(PedidoGateway pedidoGateway) {
-        this.pedidoGateway = pedidoGateway;
+    public ListaPedidosInteractor(ListaPedidoGateway listaPedidoGateway, PedidoMapper pedidoMapper) {
+        this.listaPedidoGateway = listaPedidoGateway;
+        this.pedidoMapper = pedidoMapper;
     }
 
     public List<Pedido> listaPedidos() {
-        return orderList(this.pedidoGateway.listaPedidos());
-    }
-
-    private List<Pedido> orderList(List<Pedido> list) {
-        Comparator<Pedido> comparadorStatus = Comparator.comparingInt(pedido -> switch (pedido.getStatus()) {
-            case PRONTO -> 0;
-            case PREPARACAO -> 1;
-            case RECEBIDO -> 2;
-            default -> 3;
-        });
-
-        comparadorStatus = comparadorStatus.thenComparing(Pedido::getDataDeCriacao).reversed();
-
-        list.sort(comparadorStatus);
-        return list;
+        List<PedidoResponse> listaPedidos = listaPedidoGateway.recuperaPedidos();
+        assert listaPedidos != null;
+        return listaPedidos.stream().map(pedidoMapper::toPedido)
+                .collect(Collectors.toList());
     }
 }

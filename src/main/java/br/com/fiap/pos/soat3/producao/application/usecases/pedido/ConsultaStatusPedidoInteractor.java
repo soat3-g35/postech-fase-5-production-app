@@ -1,15 +1,16 @@
 package br.com.fiap.pos.soat3.producao.application.usecases.pedido;
 
-import br.com.fiap.pos.soat3.producao.application.gateways.PedidoGateway;
+import br.com.fiap.pos.soat3.producao.application.gateways.ConsultaStatusPedidoGateway;
+
 
 public class ConsultaStatusPedidoInteractor {
-    private final PedidoGateway pedidoGateway;
+    private final ConsultaStatusPedidoGateway consultaStatusPedidoGateway;
 
-    public ConsultaStatusPedidoInteractor(PedidoGateway pedidoGateway) {
-        this.pedidoGateway = pedidoGateway;
+    public ConsultaStatusPedidoInteractor(ConsultaStatusPedidoGateway consultaStatusPedidoGateway) {
+        this.consultaStatusPedidoGateway = consultaStatusPedidoGateway;
     }
 
     public String consultaStatusPedido(Long pedidoId) {
-        return pedidoGateway.consultaStatusPedido(pedidoId);
+        return consultaStatusPedidoGateway.consultaStatusPedido(pedidoId);
     }
 }
