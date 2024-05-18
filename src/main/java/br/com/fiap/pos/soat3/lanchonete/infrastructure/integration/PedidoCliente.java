@@ -16,7 +16,7 @@ import java.util.List;
 @Headers({"Content-Type: application/json", "Accept: application/json"})
 public interface PedidoCliente {
     
-    @GetMapping("/pedidos/lista")
+    @GetMapping("/pedidos/lista/producao")
     List<PedidoResponse> listaPedidos();
 
     @GetMapping("/pedidos/{pedidoId}/status")
