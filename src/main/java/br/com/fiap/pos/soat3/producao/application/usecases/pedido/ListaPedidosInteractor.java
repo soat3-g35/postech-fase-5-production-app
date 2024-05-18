@@ -1,9 +1,9 @@
-package br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido;
+package br.com.fiap.pos.soat3.producao.application.usecases.pedido;
 
-import br.com.fiap.pos.soat3.lanchonete.application.gateways.ListaPedidoGateway;
-import br.com.fiap.pos.soat3.lanchonete.domain.entity.Pedido;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.PedidoResponse;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways.pedido.PedidoMapper;
+import br.com.fiap.pos.soat3.producao.application.gateways.ListaPedidoGateway;
+import br.com.fiap.pos.soat3.producao.domain.entity.Pedido;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoResponse;
+import br.com.fiap.pos.soat3.producao.infrastructure.gateways.pedido.PedidoMapper;
 
 import java.util.List;
 import java.util.stream.Collectors;

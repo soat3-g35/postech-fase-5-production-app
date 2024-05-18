@@ -1,4 +1,4 @@
-package br.com.fiap.pos.soat3.lanchonete;
+package br.com.fiap.pos.soat3.producao;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

@@ -1,6 +1,6 @@
-package br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido;
+package br.com.fiap.pos.soat3.producao.application.usecases.pedido;
 
-import br.com.fiap.pos.soat3.lanchonete.application.gateways.ConsultaStatusPedidoGateway;
+import br.com.fiap.pos.soat3.producao.application.gateways.ConsultaStatusPedidoGateway;
 
 
 public class ConsultaStatusPedidoInteractor {

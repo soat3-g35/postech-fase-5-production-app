@@ -1,6 +1,6 @@
-package br.com.fiap.pos.soat3.lanchonete.application.gateways;
+package br.com.fiap.pos.soat3.producao.application.gateways;
 
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.PedidoResponse;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoResponse;
 
 public interface AtualizaStatusPedidoGateway {
     

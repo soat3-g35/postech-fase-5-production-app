@@ -1,8 +1,8 @@
-package br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido;
+package br.com.fiap.pos.soat3.producao.application.usecases.pedido;
 
-import br.com.fiap.pos.soat3.lanchonete.application.gateways.AtualizaStatusPedidoGateway;
-import br.com.fiap.pos.soat3.lanchonete.domain.entity.Pedido;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways.pedido.PedidoMapper;
+import br.com.fiap.pos.soat3.producao.application.gateways.AtualizaStatusPedidoGateway;
+import br.com.fiap.pos.soat3.producao.domain.entity.Pedido;
+import br.com.fiap.pos.soat3.producao.infrastructure.gateways.pedido.PedidoMapper;
 
 public class AtualizaStatusPedidoInteractor {
     private final AtualizaStatusPedidoGateway atualizaStatusPedidoGateway;

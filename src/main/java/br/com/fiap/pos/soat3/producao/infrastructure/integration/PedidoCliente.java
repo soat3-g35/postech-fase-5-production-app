@@ -1,7 +1,7 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.integration;
+package br.com.fiap.pos.soat3.producao.infrastructure.integration;
 
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.PedidoResponse;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.StatusPedidoResponse;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoResponse;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.StatusPedidoResponse;
 import feign.Headers;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;

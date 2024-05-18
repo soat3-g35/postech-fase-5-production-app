@@ -1,7 +1,7 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.integration;
+package br.com.fiap.pos.soat3.producao.infrastructure.integration;
 
-import br.com.fiap.pos.soat3.lanchonete.application.gateways.AtualizaStatusPedidoGateway;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.PedidoResponse;
+import br.com.fiap.pos.soat3.producao.application.gateways.AtualizaStatusPedidoGateway;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoResponse;
 import org.springframework.stereotype.Component;
 
 @Component

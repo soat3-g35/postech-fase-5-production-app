@@ -1,13 +1,13 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.config;
+package br.com.fiap.pos.soat3.producao.infrastructure.config;
 
-import br.com.fiap.pos.soat3.lanchonete.application.gateways.AtualizaStatusPedidoGateway;
-import br.com.fiap.pos.soat3.lanchonete.application.gateways.ConsultaStatusPedidoGateway;
-import br.com.fiap.pos.soat3.lanchonete.application.gateways.ListaPedidoGateway;
-import br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido.AtualizaStatusPedidoInteractor;
-import br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido.ConsultaStatusPedidoInteractor;
-import br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido.ListaPedidosInteractor;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.PedidoDTOMapper;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways.pedido.PedidoMapper;
+import br.com.fiap.pos.soat3.producao.application.gateways.AtualizaStatusPedidoGateway;
+import br.com.fiap.pos.soat3.producao.application.gateways.ConsultaStatusPedidoGateway;
+import br.com.fiap.pos.soat3.producao.application.gateways.ListaPedidoGateway;
+import br.com.fiap.pos.soat3.producao.application.usecases.pedido.AtualizaStatusPedidoInteractor;
+import br.com.fiap.pos.soat3.producao.application.usecases.pedido.ConsultaStatusPedidoInteractor;
+import br.com.fiap.pos.soat3.producao.application.usecases.pedido.ListaPedidosInteractor;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoDTOMapper;
+import br.com.fiap.pos.soat3.producao.infrastructure.gateways.pedido.PedidoMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

@@ -1,11 +1,11 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.gateways.pedido;
+package br.com.fiap.pos.soat3.producao.infrastructure.gateways.pedido;
 
-import br.com.fiap.pos.soat3.lanchonete.domain.entity.ItemPedido;
-import br.com.fiap.pos.soat3.lanchonete.domain.entity.Pedido;
-import br.com.fiap.pos.soat3.lanchonete.domain.entity.Produto;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.ItemPedidoResponse;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.PedidoResponse;
-import br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido.StatusPedidoResponse;
+import br.com.fiap.pos.soat3.producao.domain.entity.ItemPedido;
+import br.com.fiap.pos.soat3.producao.domain.entity.Pedido;
+import br.com.fiap.pos.soat3.producao.domain.entity.Produto;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.ItemPedidoResponse;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoResponse;
+import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.StatusPedidoResponse;
 
 import java.util.ArrayList;
 import java.util.List;
