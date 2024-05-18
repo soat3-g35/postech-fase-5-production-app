@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v4
       with:
         fetch-depth: 0
-        pedido-service-url: ${{ secrets.PEDIDO_SERVICE_URL }}
+        pedido-service-url: ${{env.VAR_PEDIDO_SERVICE_URL}}
         
     - name: Install kubectl
       uses: azure/setup-kubectl@v3
