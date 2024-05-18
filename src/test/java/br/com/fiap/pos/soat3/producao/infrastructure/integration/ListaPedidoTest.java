@@ -3,7 +3,6 @@ package br.com.fiap.pos.soat3.producao.infrastructure.integration;
 
 import br.com.fiap.pos.soat3.producao.domain.entity.StatusPedido;
 import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.PedidoResponse;
-import br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido.StatusPedidoResponse;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
