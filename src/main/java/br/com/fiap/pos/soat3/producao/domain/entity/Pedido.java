@@ -1,4 +1,4 @@
-package br.com.fiap.pos.soat3.lanchonete.domain.entity;
+package br.com.fiap.pos.soat3.producao.domain.entity;
 
 import java.time.LocalDateTime;
 import java.util.List;

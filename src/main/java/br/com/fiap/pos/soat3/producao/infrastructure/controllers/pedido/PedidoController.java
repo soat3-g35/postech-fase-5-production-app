@@ -1,9 +1,9 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido;
+package br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido;
 
 
-import br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido.AtualizaStatusPedidoInteractor;
-import br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido.ConsultaStatusPedidoInteractor;
-import br.com.fiap.pos.soat3.lanchonete.application.usecases.pedido.ListaPedidosInteractor;
+import br.com.fiap.pos.soat3.producao.application.usecases.pedido.AtualizaStatusPedidoInteractor;
+import br.com.fiap.pos.soat3.producao.application.usecases.pedido.ConsultaStatusPedidoInteractor;
+import br.com.fiap.pos.soat3.producao.application.usecases.pedido.ListaPedidosInteractor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.config.exception;
+package br.com.fiap.pos.soat3.producao.infrastructure.config.exception;
 
 public class GenericException extends RuntimeException {
 

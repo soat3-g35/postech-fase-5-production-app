@@ -1,4 +1,4 @@
-package br.com.fiap.pos.soat3.lanchonete.domain.entity;
+package br.com.fiap.pos.soat3.producao.domain.entity;
 
 public enum StatusPedido {
     GERADO("Gerado"),

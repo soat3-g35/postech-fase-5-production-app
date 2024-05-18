@@ -1,4 +1,4 @@
-package br.com.fiap.pos.soat3.lanchonete.infrastructure.controllers.pedido;
+package br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido;
 
 public class StatusPedidoResponse {
 
