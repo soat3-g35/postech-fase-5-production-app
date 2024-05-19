@@ -40,6 +40,7 @@ public class ProdutoTest {
 
     }
 
+    @Test
     void givenProduto_shouldReturnProduto1() {
         Produto produto = new Produto("nome",
                 "descricao",
@@ -48,14 +49,13 @@ public class ProdutoTest {
                 new Categoria(1l, "nome"));
 
         assertNotNull("", produto);
-        assertEquals("", produto.getId(), 1l);
+        assertEquals("", produto.getNome(), "nome");
 
     }
 
     @Test
     void givenProduto_shouldReturnEmptyProduto() {
-        Produto produto = new Produto();
-        produto.setId(1l);
+        Produto produto = new Produto(1l);
         produto.setNome("nome");
         produto.setDescricao("descricao");
         produto.setImagem("image");
