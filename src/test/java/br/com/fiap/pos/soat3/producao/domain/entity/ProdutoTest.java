@@ -39,4 +39,29 @@ public class ProdutoTest {
         assertEquals("", produto.getCategoria().getNome(), "nome");
 
     }
+
+    void givenProduto_shouldReturnProduto1() {
+        Produto produto = new Produto("nome",
+                "descricao",
+                "imagem",
+                new BigDecimal(10),
+                new Categoria(1l, "nome"));
+
+        assertNotNull("", produto);
+        assertEquals("", produto.getId(), 1l);
+
+    }
+
+    @Test
+    void givenProduto_shouldReturnEmptyProduto() {
+        Produto produto = new Produto();
+        produto.setId(1l);
+        produto.setNome("nome");
+        produto.setDescricao("descricao");
+        produto.setImagem("image");
+        produto.setValor(new BigDecimal(10));
+        produto.setCategoria(new Categoria("nome"));
+
+        assertNotNull("", produto);
+    }
 }
