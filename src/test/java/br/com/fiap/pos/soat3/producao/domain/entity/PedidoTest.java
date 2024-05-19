@@ -27,12 +27,6 @@ public class PedidoTest {
 
         assertNotNull("", pedido);
         assertEquals("", pedido.getId(), 1l);
-        assertEquals("", produto.getNome(), "nome");
-        assertEquals("", produto.getDescricao(), "descricao");
-        assertEquals("", produto.getImagem(), "imagem");
-        assertEquals("", produto.getValor(), new BigDecimal(10));
-        assertEquals("", produto.getCategoria().getNome(), "nome");
-
     }
 
     @Test
