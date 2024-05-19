@@ -9,9 +9,6 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-
-import static org.mockito.Mockito.when;
 import static org.springframework.test.util.AssertionErrors.assertEquals;
 import static org.springframework.test.util.AssertionErrors.assertNotNull;
 
@@ -50,6 +47,16 @@ public class ProdutoTest {
 
         assertNotNull("", produto);
         assertEquals("", produto.getNome(), "nome");
+
+    }
+
+    @Test
+    void givenProduto_shouldReturnProduto2() {
+        Produto produto = new Produto();
+        produto.setId(1l);
+
+        assertNotNull("", produto);
+        assertEquals("", produto.getId(), 1l);
 
     }
 
