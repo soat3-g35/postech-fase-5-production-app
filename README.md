@@ -13,3 +13,6 @@ Este módulo é responsável pela aplicação de Produção do nosso sistema de 
 - Update do Pedido em Produção;
 - Recupera Lista de Pedidos;
 - Recupera Status do Pedido;
+
+## Code Coverage
+![Coverage](https://iili.io/JiHNHS1.md.png)
