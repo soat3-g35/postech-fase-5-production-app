@@ -14,5 +14,8 @@ Este módulo é responsável pela aplicação de Produção do nosso sistema de 
 - Recupera Lista de Pedidos;
 - Recupera Status do Pedido;
 
+## Arquitetura
+![Diagrama](https://iili.io/JiJntae.md.png)
+
 ## Code Coverage
 ![Coverage](https://iili.io/JiHNHS1.md.png)
