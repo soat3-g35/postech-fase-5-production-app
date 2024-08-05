@@ -3,6 +3,7 @@ package br.com.fiap.pos.soat3.producao.infrastructure.controllers.pedido;
 
 import br.com.fiap.pos.soat3.producao.application.usecases.pedido.AtualizaStatusPedidoInteractor;
 import br.com.fiap.pos.soat3.producao.application.usecases.pedido.ConsultaStatusPedidoInteractor;
+import br.com.fiap.pos.soat3.producao.application.usecases.pedido.FinalizaPreparoInteractor;
 import br.com.fiap.pos.soat3.producao.application.usecases.pedido.ListaPedidosInteractor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,15 +21,18 @@ public class PedidoController {
 
     private final ListaPedidosInteractor listaPedidosUseCase;
     private final AtualizaStatusPedidoInteractor atualizaStatusPedidoUseCase;
+    private final FinalizaPreparoInteractor finalizaPreparoUseCase;
     private final ConsultaStatusPedidoInteractor consultaStatusPedidoUseCase;
     private final PedidoDTOMapper pedidoDTOMapper;
 
     public PedidoController(ListaPedidosInteractor listaPedidosUseCase,
                             AtualizaStatusPedidoInteractor atualizaStatusPedidoUseCase,
+                            FinalizaPreparoInteractor finalizaPreparoUseCase,
                             ConsultaStatusPedidoInteractor consultaStatusPedidoUseCase,
                             PedidoDTOMapper pedidoDTOMapper) {
         this.listaPedidosUseCase = listaPedidosUseCase;
         this.atualizaStatusPedidoUseCase = atualizaStatusPedidoUseCase;
+        this.finalizaPreparoUseCase = finalizaPreparoUseCase;
         this.consultaStatusPedidoUseCase = consultaStatusPedidoUseCase;
         this.pedidoDTOMapper = pedidoDTOMapper;
     }
@@ -47,5 +51,11 @@ public class PedidoController {
     public ResponseEntity<PedidoResponse> atualizaStatusPedido(@PathVariable("pedidoId") Long pedidoId,
                                                                @PathVariable("status") String statusPedido) {
         return ResponseEntity.ok(pedidoDTOMapper.toPedidoResponse(atualizaStatusPedidoUseCase.atualizaStatusPedido(pedidoId, statusPedido)));
+    }
+
+    @PutMapping("/{pedidoId}/finalizado")
+    public ResponseEntity<PedidoResponse> finalizaPreparo(@PathVariable("pedidoId") Long pedidoId) {
+        finalizaPreparoUseCase.finalizaPreparo(pedidoId);
+        return ResponseEntity.ok().build();
     }
 }
